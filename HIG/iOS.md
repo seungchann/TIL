@@ -1,4 +1,9 @@
 # Human Interface Guideline - iOS  
+## 목차  
+* [Themes](#themes)  
+* [Interface Essentials](#interface-essentials)  
+* [References](#references)
+
 ## Themes  
 ### iOS Design Themes  
 
@@ -55,3 +60,32 @@
 * 최고의 앱들은 '사용자들이 마음대로 조작하게 하는 것'과 '원하지 않는 결과를 피하는 것 사이'에서 밸런스를 잘 맞출 수 있습니다.  
 * 상호작용하는 요소들을 친숙하고 예측가능하게 만들게 되면, 앱은 사람들이 앱을 통제한다고 느낄 수 있게 만들 수 있습니다.  
 * 이 과정에서 사용자들은 해가 되는 행동을 확인할 수 있고, 심지어 그들이 진행 중인 상황에서도 쉽게 작업을 취소할 수 있습니다.  
+
+## Interface Essentials  
+* 대부분의 iOS 앱들은 UIKit의 component를 사용하여 빌드됩니다.  
+* UIKit은 공통 interface element들을 정의하고 있는 programming framework 입니다.  
+* UIKit은 앱이 시스템 전반적으로 일관성 있는 외관을 갖게 하며, 동시에 높은 수준의 customization도 제공합니다.  
+* UIKit은 유연하고 친숙하며, 어떤 iOS 기기에도 잘 어울리는 app을 만들 수 있게 해줍니다.  
+* System에서 appearance change가 있어도 자동으로 업데이트됩니다.  
+* UIKit의 interface element들은 세 가지로 나눌 수 있습니다.  
+
+### Bars  
+* 앱에서 사용자들이 어디에 위치해 있는지 말해줍니다.  
+* navigation을 제공합니다.  
+* Action을 시작하거나 information을 주고받을 수 있는 button이나 elements를 포함하고 있습니다.  
+
+### Views  
+* 사용자들이 앱을 사용할 때 처음으로 보게 되는 text, graphics, animations, interactive elements와 같은 content를 담고 있습니다.  
+* Scrolling, insertion, deletion, arrangement를 가능하게 해줍니다.  
+
+### Controls  
+* Action을 시작하고, 정보를 전달해줍니다.  
+* Button, switch, text field, progress indicator 등이 있습니다.  
+
+### 추가 설명  
+* 기능적 측면에서도 UIkit을 이용하면, 앱이 사용자의 gesture에 반응할 수 있으며, drawing, accessibility, printing과 같은 기능을 할 수 있게 됩니다.  
+* iOS는 Apple Pay, HealthKit, ResearchKit과 같은 다른 프로그래밍 프레임워크와 테크놀로지와도 긴밀하게 통합(연계)되어 있습니다.  
+
+## References  
+* https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/
+* https://developer.apple.com/design/human-interface-guidelines/ios/overview/interface-essentials/
