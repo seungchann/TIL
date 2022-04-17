@@ -11,6 +11,7 @@ Today, I learned.
 ## Languages  
 * C  
   * [Basics](https://github.com/seungchann/TIL/blob/main/C/basics.md)  
+  * [C 언어의 메모리 구조](https://github.com/seungchann/TIL/blob/main/C/memory.md)  
 
 ## Computer Security  
 * [Software security basic principle](https://github.com/seungchann/TIL/blob/main/computer-security/software-security-basic-principle.md)  
