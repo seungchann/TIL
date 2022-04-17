@@ -7,3 +7,12 @@ Today, I learned.
 
 ## Human Interface Guideline  
 * [iOS](https://github.com/seungchann/TIL/blob/main/HIG/iOS.md)  
+
+## Languages  
+* C  
+  * [Basics](https://github.com/seungchann/TIL/blob/main/C/basics.md)  
+
+## Computer Security  
+* [Software security basic principle](https://github.com/seungchann/TIL/blob/main/computer-security/software-security-basic-principle.md)  
+* [Software lifecycle](https://github.com/seungchann/TIL/blob/main/computer-security/software-lifecycle.md)  
+* [Security policies](https://github.com/seungchann/TIL/blob/main/computer-security/security-policies.md)  
