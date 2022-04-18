@@ -37,3 +37,69 @@ int main() {
 
 ![변수의 메모리 주소](https://dojang.io/pluginfile.php/337/mod_page/content/21/unit34-2.png)  
 
+## 1. 포인터 변수 선언하기  
+* 메모리 주소는 포인터(pointer) 변수에 저장합니다.  
+* 다음과 같이 포인터 변수는 `*`를 사용하여 선언합니다.  
+  * 자료형 `* 포인터이름`;  
+  * 포인터 = &변수;
+
+```c
+#include <stdio.h>
+
+int main() {
+  int *numPtr; // 포인터 변수 선언
+  int num1 = 10; // int형 변수를 선언하고 10 저장
+  
+  numPtr = &num1; // num1의 메모리 주소를 포인터 변수에 저장
+  
+  printf("%p\n", numPtr); // 0055FC24: 포인터 변수 numPtr의 값 출력
+                          // 컴퓨터마다, 실행할 때마다 달라짐  
+  printf("%p\n", &num1); // 0055FC24: 변수 num1의 메모리 주소 출력
+                         // 컴퓨터마다, 실행할 때마다 달라짐
+                         
+  return 0;
+}
+
+// 실행 결과
+0055FC24 (메모리 주소. 컴퓨터마다, 실행할 때마다 달라짐)
+0055FC24 (메모리 주소. 컴퓨터마다, 실행할 때마다 달라짐)
+```
+* 포인터 변수를 선언할 때는 자료형 뒤에 `*` (Asterisk, 애스터리스크)를 붙입니다.  
+* `*`의 위치에 따른 차이는 없으며 모두 같은 뜻입니다.  
+
+```c
+int* numPtr; // 자료형 쪽에 *을 붙임
+int * numPtr; // 자료형과 변수 가운데 *를 넣음
+int *numPtr; // 변수 쪽에 *을 붙임
+```
+
+* 포인터 변수를 선언했으면 다음과 같이 &로 변수의 주소를 구해서 포인터 변수에 저장합니다.  
+```c
+numPtr = &num1; // num1의 메모리 주소를 포인터 변수에 저장  
+```
+
+* 이제 printf로 포인터 numPtr의 값을 출력해보면 변수 num1의 메모리 주소가 나옵니다.  
+* 즉, 포인터와 메모리 주소는 같은 의미입니다.  
+```c
+printf("%p\n", numPtr); // 0055FC24: 포인터 변수 numPtr의 값 출력
+                        // 컴퓨터마다, 실행할 때마다 달라짐
+printf("%p\n", &num1);  // 0055FC24: 변수 num1의 메모리 주소 출력
+                        // 컴퓨터마다, 실행할 때마다 달라짐
+```
+* 포인터 변수를 선언할 때는 자료형을 알려주고 `*`를 붙이는 방식을 사용합니다.  
+* 여기서 `int *`는 영어로 pointer to int라고 읽는데, int형 공간을 가리키는 포인터라는 뜻입니다. (int 포인터라고도 부릅니다.)  
+
+![int 포인터](https://dojang.io/pluginfile.php/338/mod_page/content/23/unit34-3.png)  
+* 다음과 같이 포인터는 메모리의 특정 위치를 가리킬 때 사용합니다.  
+
+![포인터와 메모리](https://dojang.io/pluginfile.php/338/mod_page/content/23/unit34-4.png)  
+
+```c
+int *numPtr; // 포인터 변수 선언
+int num1 = 10;
+
+numPtr = &num1; // num1의 메모리 주소를 포인터 변수에 저장 
+```
+* numPtr은 10이 저장된 메모리 공간을 가리킵니다.  
+* 즉, 변수 num1이 있는 공간을 가리키게 되는 것입니다.  
+![포인터에 변수의 메모리 주소 할당](https://dojang.io/pluginfile.php/338/mod_page/content/23/unit34-5.png)  
