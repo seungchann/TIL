@@ -14,6 +14,9 @@ Today, I learned.
   * [C 언어의 메모리 구조](https://github.com/seungchann/TIL/blob/main/C/memory.md)  
   * [포인터](https://github.com/seungchann/TIL/blob/main/C/pointer.md)  
 
+## Algorithm  
+* [그리디](https://github.com/seungchann/TIL/blob/main/algorithm/greedy.md)  
+
 ## Computer Security  
 * [Software security basic principle](https://github.com/seungchann/TIL/blob/main/computer-security/software-security-basic-principle.md)  
 * [Software lifecycle](https://github.com/seungchann/TIL/blob/main/computer-security/software-lifecycle.md)  
