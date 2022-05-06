@@ -8,6 +8,9 @@ Today, I learned.
 ## Human Interface Guideline  
 * [iOS](https://github.com/seungchann/TIL/blob/main/HIG/iOS.md)  
 
+## Swift
+[Swift gitignore](https://github.com/seungchann/TIL/tree/main/Swift)  
+
 ## Languages  
 * C  
   * [Basics](https://github.com/seungchann/TIL/blob/main/C/basics.md)  
