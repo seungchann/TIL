@@ -9,7 +9,7 @@ Today, I learned.
 * [iOS](https://github.com/seungchann/TIL/blob/main/HIG/iOS.md)  
 
 ## Swift
-[Swift gitignore](https://github.com/seungchann/TIL/tree/main/Swift)  
+* [Swift gitignore](https://github.com/seungchann/TIL/blob/main/Swift/swift-gitignore.md)  
 
 ## Languages  
 * C  
