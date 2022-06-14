@@ -60,7 +60,12 @@
 ### 9. Fault compartments  
 * It builds on **least privilege and isolation.**  
 * Both properties are most effective in combination.  
-  * Many small components that are running and interacting with least privileges.
+  * Many small components that are running and interacting with least privileges.  
+* QMail  
+  * Separate modules run under separate user IDs (isolation)  
+  * Each user ID has only limited access to a subset of the resources (least privilege)  
+  * Only one very small component runs as suid root  
+  * Only one very small component running as root  
 
 ### 10. Hardware and software abstractions  
 * **Abstraction** is the act of representing essential features without including the background details or explanations.  
