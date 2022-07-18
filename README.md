@@ -25,3 +25,6 @@ Today, I learned.
 * [Software security basic principle](https://github.com/seungchann/TIL/blob/main/computer-security/software-security-basic-principle.md)  
 * [Software lifecycle](https://github.com/seungchann/TIL/blob/main/computer-security/software-lifecycle.md)  
 * [Security policies](https://github.com/seungchann/TIL/blob/main/computer-security/security-policies.md)  
+
+## 도서  
+* [메타인지, 생각의 기술](https://github.com/seungchann/TIL/blob/main/도서/메타인지-생각의-기술.md)  
