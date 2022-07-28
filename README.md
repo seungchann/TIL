@@ -31,5 +31,9 @@ Today, I learned.
 * [Software lifecycle](https://github.com/seungchann/TIL/blob/main/computer-security/software-lifecycle.md)  
 * [Security policies](https://github.com/seungchann/TIL/blob/main/computer-security/security-policies.md)  
 
+## Data Structure  
+* [01. 자료구조와 알고리즘의 이해](https://github.com/seungchann/TIL/blob/main/data-structure/01.%20자료구조와%20알고리즘의%20이해.md)  
+* [02. 재귀 (Recursion)](https://github.com/seungchann/TIL/blob/main/data-structure/02.%20재귀.md)  
+
 ## 도서  
 * [메타인지, 생각의 기술](https://github.com/seungchann/TIL/blob/main/도서/메타인지-생각의-기술.md)  
