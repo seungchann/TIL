@@ -169,15 +169,15 @@
 * 프로세스에 CPU 를 할당 (scheduler dispatch)  
 * 프로세스의 상태 : ready -> running -> waiting -> ready  
 * CPU scheduling decisions 이 다음과 같은 상태에서 일어날 수 있다.  
-  * 0. Is admitted  
-  * 1. Switches from **running to waiting state** (ex: I/O requests)    
-  * 2. Switches from **running to ready state** (ex: when an interrupt occurs)  
-  * 3. Switches from **waiting to ready state** (ex: I/O completion)  
-  * 4. Terminates  
-* 1과 4의 경우 **새로운 프로세스**를 **ready queue** 에서 골라야만 한다.  
-* 따라서, 1과 4에서의 Scheduling은 **nonpreemptive** 하다.  
+  * `0`. Is admitted  
+  * `1`. Switches from **running to waiting state** (ex: I/O requests)    
+  * `2`. Switches from **running to ready state** (ex: when an interrupt occurs)  
+  * `3`. Switches from **waiting to ready state** (ex: I/O completion)  
+  * `4`. Terminates  
+* `1`과 `4`의 경우 **새로운 프로세스**를 **ready queue** 에서 골라야만 한다.  
+* 따라서, `1`과 `4`에서의 Scheduling은 **nonpreemptive** 하다.  
   * 한번 CPU가 프로세스에 할당되었다면, 프로세스는 block 되거나 종료되기 전까지 실행된다.  
-* 0, 2, 3의 Scheduling는 **preemptive** 하다.  
+* `0`, `2`, `3`의 Scheduling는 **preemptive** 하다.  
   * 프로세스는 **CPU** 로 부터 강제로 제거된다. ex) time-slicing  
 <img width="569" alt="Time-scheduling" src="https://user-images.githubusercontent.com/63276842/183124975-f3c70ecd-7e6b-4d96-a5a4-18163c57ff66.png">  
 
