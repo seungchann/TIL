@@ -290,3 +290,60 @@
 * 공유된 자원에 **Concurrent한 access** 를 하게 되면 **data inconsistency** 가 발생할 수 있다.  
 * Race condition : 몇몇 프로세스들이 같은 데이터를 동시에 접근해서 사용할 때, 순서에 따라 실행 결과가 달라지는 경우  
 * 연관된 프로세스들이 순서대로 실행될 수 있도록 보장하는 메커니즘이 필요함.  
+
+## 프로세스 동기화  
+### Critical Section (임계영역)  
+멀티 스레딩의 문제점에서 나오듯, 동일한 자원을 동시에 접근하는 작업 (e.g. 공유하는 변수 사용, 동일 파일을 사용하는 등)을 실행하는 코드 영역을 **Critical Section** 이라 한다.  
+
+### Critical Section Problem (임계영역 문제)  
+* 프로세스들이 Critical Section 을 함께 사용할 수 있는 프로토콜을 설계하는 것이다.  
+* Requirements (해결을 위한 기본조건)  
+  * Mutual Exclusion (상호 배제)  
+    * 프로세스 P1 이 Critical Section 에서 실행중이라면, 다른 프로세스들은 그들이 가진 Critical Section 에서 실행될 수 없다.  
+  * Progress (진행)  
+    * Critical Section 에서 실행중인 프로세스가 없고, 별도의 동작이 없는 프로세스들만 Critical Section 진입 후보로서 참여될 수 있다.  
+  * Bounded Waiting (한정된 대기)  
+    * P1 에 Critical Section 에 진입 후 부터 받아들여질 때까지, 다른 프로세스들이 Critical Section 에 진입하는 횟수는 제한이 있어야 한다.  
+
+### 해결책  
+### Mutex Lock  
+* 동시에 공유 자원에 접근하는 것을 막기 위해 Critical Section 에 진입하는 프로세스는 Lock 을 획득한다.  
+* Critical Section 을 빠져나올 때, Lock 을 방출함으로써 동시에 접근이 되지 않도록 한다.  
+* 한계 : 다중처리기 환경에서는 시간적인 효율성 측면에서 적용할 수 없다.  
+
+### Semaphores (세마포)  
+* 소프트웨어 상에서 Critical Section 문제를 해결하기 위한 동기화 도구  
+* OS 는 Counting / Binary 세마포를 구분한다.  
+* 카운팅 세마포  
+  * **가용한 개수를 가진 자원** 에 대한 접근 제어용으로 사용되며, 세마포는 그 가용한 **자원의 개수** 로 초기화 된다.  
+  * 자원을 사용하면 세마포가 감소, 방출하면 세마포가 증가한다.  
+* 이진 세마포  
+  * MUTEX 라고도 부르며, 상호배제의 (Mutual Exclusion) 의 머릿글자를 따서 만들어졌다.  
+  * 이름 그대로 0 과 1 사이의 값만 가능하며, 다중 프로세스들 사이의 Critical Section 문제를 해결하기 위해 사용한다.  
+* 단점  
+  * Busy Waiting (바쁜 대기)  
+    * Spin lock 이라고 불리는 Semaphore 초기 버전에서 Critical Section 에 진입해야하는 프로세스는 진입 코드를 계속 반복 실행해야 하며, CPU 시간을 낭비했었다.  
+    * 이를 Busy Waiting 이라고 부르며 특수한 상황이 아니면 비효율적이다.  
+    * 일반적으로는 Semaphore 에서 Critical Section 에 진입을 시도했지만 실패한 프로세스에 대해 Block 시킨 뒤, Critical Section 에 자리가 날 때 다시 깨우는 방식을 사용한다.  
+    * 이 경우 Busy waiting 으로 인한 시간낭비 문제가 해결된다.  
+
+### Deadlock (교착상태)  
+* 두 개 이상의 프로세스들이, waiting process 중 하나의 결과에서 나오는 event 를 무기한으로 waiting 하고 있는 샅애  
+* 세마포가 Ready Queue 를 가지고 있고, 둘 이상의 프로세스가 Critical Section 진입을 무한정 기다리고 있고, Critical Section 에서 실행되는 프로세스는 진입 대기 중인 프로세스가 실행되야만 빠져나올 수 있는 상황을 지칭한다.  
+* Deadlock 의 성립 조건  
+  * Mutual exclusion: only one process at a time can use a resource.  
+  * Hold and wait: a process holding at least one resource is waiting to acquire additional resources held by other processes.  
+  * No preemption: a resource can be released only voluntarily by the process holding it, after that process has completed its task.
+  * Circular wait: there exists a set {P0, P1, ... , Pn} of waiting processes such that  
+    * P0 is waiting for a resource that is held by P1.
+    * P1 is waiting for a resource that is held by P2.
+    * P(n-1) is waiting for a resource that is held by Pn.
+    * Pn is waiting for a resource that is held by P0.
+
+### Starvation  
+* Indefinite blocking  
+* Semaphore queue 에서 계속 미뤄지기 때문에 프로세스가 제거될 수가 없다.  
+
+
+
+
